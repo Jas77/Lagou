@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>拉勾网</title>
+    <link href="css/lg1.css"  rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--头部-->
+<div class="dl_header">
+    <a href="#" class="logo"><img src="images/logo_13bcdf6.png"/></a>
+</div>
+<div class="content_box">
+    <div class="left_area">
+        <div class="reghd">
+            <ul>
+                <li class="reghd_mobile"  onclick="typechoose(0);">
+			     <span>手机号码注册
+				 </span>
+                </li>
+                <li class="reghd_email"  onclick="typechoose(1);">
+			     <span>邮箱注册
+				 </span>
+                </li>
+            </ul>
+            <div class="typesel" id="typesel">
+                <div class="typesel_jt">
+                </div>
+                <div class="typesel_jtw">
+                </div>
+            </div>
+        </div>
+        <div class="mobilemain" id="mobilemain">
+            <div class="input_item">
+                <input type="text" class="input input_white" placeholder="请输入常用手机号码">
+            </div>
+            <div class="input_item">
+                <input type="text" class="input input_white yz" placeholder="请证明你不是机器人">
+                <img class="yzm" src="images/create.jpg"  width="100" height="46">
+                <a href="javascript:void(0);" class="reflash"><img src="images/icon-reflash_a187c0b.jpg"/></a>
+                <div class="clearfix">
+                </div>
+            </div>
+            <div class="input_item">
+                <input type="text" class="input input_white dx" placeholder="请输入短信验证码">
+                <input type="button" class="getdxyz" value="获取验证码">
+                <div class="clearfix">
+                </div>
+            </div>
+            <div class="input_item">
+                <input type="text" class="input input_white" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="emailmain" id="emailmain">
+            <div class="input_item">
+                <input type="text" class="input input_white" placeholder="请输入常用邮箱地址">
+            </div>
+            <div class="input_item">
+                <input type="text" class="input input_white" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="input_item">
+            <label for="checkbox" class="box_checkbox">
+                <span class="checkbox_icon" id="checkbox_icon" onclick="checkzc();"></span>
+                <input type="checkbox" id="checkbox" class="checkbox" checked="checked">我已阅读并同意
+                <a href="#" target="_blank" style="color:#00b38a">《拉勾用户协议》</a>
+            </label>
+        </div>
+        <div class="input_item">
+            <input type="submit" class="btn" value="注&nbsp;册">
+        </div>
+    </div>
+    <div class="divider">
+        <img src="images/divider-login_3362138.jpg"/>
+    </div>
+    <div class="right_area">
+        <h5>已有拉勾帐号:</h5>
+        <a href="#" class="login_now">直接登录</a>
+        <h5>使用以下帐号直接登录:</h5>
+        <div class="zctb">
+            <a href="#" class="vender_icon" target="_blank"><img src="images/icon-sina_9cae1d9.png"/></a>
+            <a href="#" class="vender_icon" target="_blank"><img src="images/icon-tecent_5870bd4.png"/></a>
+            <a href="#" target="_blank"><img src="images/icon-wechat_12ea62f.png"/></a>
+            <div class="clearfix">
+            </div>
+        </div>
+        <div class="qrcode">
+            <img src="images/qrcode_0ec6bff.jpg" width="124" height="123" alt="二维码">
+            <p>[ 扫码下载拉勾APP ]</p>
+        </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="coresha">
+    </div>
+    <div class="coreshabk">
+    </div>
+</div>
+<div class="lgfooter">— 专注互联网职业机会 —
+</div>
+
+<script>
+    function typechoose(i){
+        var lef = i*150;
+        var sel = document.getElementById("typesel");
+        var mobile = document.getElementById("mobilemain");
+        var email = document.getElementById("emailmain");
+        sel.style.left = lef+"px" ;
+        if(i == 0){
+            mobile.style.display = "block";
+            email.style.display = "none";
+        }
+        else{
+            mobile.style.display = "none";
+            email.style.display = "block";
+        }
+    }
+
+    var sx = 0;
+    function checkzc(){
+        var bt = document.getElementById("checkbox_icon");
+        if(sx == 0){
+            bt.style['background-position']='0px 0px';
+            sx = 1;
+            document.getElementById("checkbox").checked=false;
+        }
+        else{
+            bt.style['background-position']='-13px 0px';
+            sx = 0;
+            document.getElementById("checkbox").checked=true;
+        }
+    }
+</script>
+</body>
+</html>

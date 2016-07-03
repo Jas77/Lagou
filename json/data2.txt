@@ -1,0 +1,5 @@
+[
+{"imgSrc":images/banner-1-1.JPG},
+{"imgSrc":images/banner-2-2.JPG},
+{"imgSrc":images/banner-3-3.JPG},
+]
